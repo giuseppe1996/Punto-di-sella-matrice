@@ -35,4 +35,4 @@ int calc_ind_min(const vettore V,int riemp);
 int calc_max_col(const vettore V, int riemp);
 /*in questo modo posso sfruttare queste due funzioni per calcolare il punto di sella, se infatti entrambe le funzioni
 indirizzano nella stessa posizione allora � il punto di sella */
-tipo_punto_sella trova_punto_sella(const matrice M, int riemp,struct_punto_sella);
+struct_punto_sella trova_punto_sella(const matrice M, int riemp,struct_punto_sella);
