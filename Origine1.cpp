@@ -6,10 +6,10 @@ void leggi_mat(const stringa nome_file, int & riemp, matrice M) {
 	//verifico una corretta apertura del file
 	if (input.fail()) {
 		cout << "Errore nell'apertura del file! ";
-		input.close(); // è sempre buono chiudere il file se si verifica un errore!
+		input.close(); // Ã¨ sempre buono chiudere il file se si verifica un errore!
 		exit(5); //esco dalla funzione
 	}
-	/*poichè so che il primo elemento del file mi indica il riempimento, allora leggo quello e poi con un for
+	/*poichÃ¨ so che il primo elemento del file mi indica il riempimento, allora leggo quello e poi con un for
 	posso leggere il resto della matrice.*/
 	input >> riemp;
 	for (int i = 0;i < riemp;i++) {
@@ -19,7 +19,7 @@ void leggi_mat(const stringa nome_file, int & riemp, matrice M) {
 	}
 }
 
-//controllo che la matrice sia efettivamente formata da numeri positivi, se il tipo è int sarà per forza formata da interi.
+//controllo che la matrice sia efettivamente formata da numeri positivi, se il tipo Ã¨ int sarÃ  per forza formata da interi.
 bool controllo_mat(int riemp, const matrice M) {
 	for (int i = 0;i < riemp;i++) {
 		for (int j = 0;j < riemp;j++) {
@@ -31,7 +31,7 @@ bool controllo_mat(int riemp, const matrice M) {
 	}
 }
 
-int calc_ind_min(const vettore V,int riemp)/*essendo la matrice quadrata il riempimento sarà quello */{
+int calc_ind_min(const vettore V,int riemp)/*essendo la matrice quadrata il riempimento sarÃ  quello */{
 	int min, ind_min;
 	min = V[0]; //inizializzo il minimo al primo elemento del vettore
 	for (int i = 0;i < riemp;i++) {
@@ -45,7 +45,7 @@ int calc_ind_min(const vettore V,int riemp)/*essendo la matrice quadrata il riem
 	return ind_min;
 }
 
-//questa funzione è come quella precedente solo che calcola il massimo e non il minimo
+//questa funzione Ã¨ come quella precedente solo che calcola il massimo e non il minimo
 int calc_ind_max(const vettore V, int riemp) {
 	int max, ind_max;
 	max = V[0];
@@ -58,7 +58,7 @@ int calc_ind_max(const vettore V, int riemp) {
 	return ind_max;
 }
 
-tipo_punto_sella trova_punto_sella(const matrice M, int riemp,tipo_punto_sella struct_punto_sella) {
+struct_punto_sella trova_punto_sella(const matrice M, int riemp,tipo_punto_sella struct_punto_sella) {
 	int i, j, sella, z = 0;
 		vettore min, max;
 	for (i = 0;i < riemp;i++){
